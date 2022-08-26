@@ -1,0 +1,24 @@
+.logo {
+  font-family: "Raleway", sans-serif; 
+  color: var(--logo-title-black);
+}
+
+@media screen and (max-width: 1199px) {
+  .logo{ 
+    @include font (24, 700, 28);
+  }
+}
+
+@media screen and (min-width: 1200px){
+  .logo {
+    @include font(26, 700, 31);
+  }
+}
+
+.logo__span_accent{
+  color: var(--button-active-blue);
+}
+
+.logo_dark-theme {
+  color: var(--background-general-white);
+}

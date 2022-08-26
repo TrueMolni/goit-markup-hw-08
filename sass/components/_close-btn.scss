@@ -1,0 +1,26 @@
+.close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  
+    @extend %align;
+  
+    width: 30px;
+    height: 30px;
+    margin-left: auto;
+    margin-right: 0;
+  
+    background-color: var(--background-general-white);
+    color: #000000;
+  
+    transition: fill var(--animation-duration) var(--animation-cubic);
+  
+    &:hover {
+      fill: var(--button-active-blue);
+    }
+  }
+  
+  .close-btn__icon {
+    width: 18px;
+    height: 18px;
+  }

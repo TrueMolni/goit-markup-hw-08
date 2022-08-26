@@ -1,0 +1,32 @@
+@mixin font($fs: 24, $fw: 400, $lh: 32) {
+  font-size: #{$fs}px;
+  font-weight: $fw;
+  line-height: $lh / $fs;
+}
+
+@mixin push_auto {
+  margin: {
+    left: auto;
+    right: auto;
+  }
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: "") {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+@mixin resolution ($value, $class, $image) {
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: #{$value}px),
+  (-webkit-min-device-pixel-ratio: 2) and (min-width: #{$value}px),
+  (min-resolution: 192dpi) and (min-width: #{$value}px),
+  (min-resolution: 2dppx) and (min-width: #{$value}px) {
+    .#{$class} {
+      background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),url(#{$image});
+    }   
+  }
+}

@@ -1,0 +1,104 @@
+.hero {
+  @include push_auto;
+  padding-top: 118px;
+  padding-bottom: 118px;
+
+  color: var(--background-general-white);
+
+  background-color: var(--background-hero);
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../img/hero-bcg_mobile1x.jpg");
+  background-size: 480px 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero__title {  
+  @include font(26, 900, 42);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  @include push_auto;
+
+  @media screen and (min-width: 768px) {
+    & {
+      width: 360px;
+    }    
+  }
+}
+
+.hero__hero-btn {
+  margin-top: 30px;
+  padding: 10px 32px;
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    max-width: 1600px;
+    height: 600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+
+  .hero__title {
+    width: 696px;
+    margin: 0 auto;
+
+    @include font(44, 900, 60);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background-size: 768px 400px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    background-size: cover;
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+  (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px),
+  (min-resolution: 192dpi) and (max-width: 767px),
+  (min-resolution: 2dppx) and (max-width: 767px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../img/hero-bcg_mobile2x.jpg");
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../img/hero-bcg_tablet1x.jpg");
+  }
+}
+@media screen and (min-width: 768px) {
+  @include resolution(768, hero, "../img/hero-bcg_tablet2x.jpg");
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../img/hero-bcg_desktop1x.jpg");
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  @include resolution(1200, hero, "../img/hero-bcg_desktop2x.jpg");
+}

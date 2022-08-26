@@ -1,0 +1,16 @@
+@media screen and (max-width: 767px) {
+    .header-menu-btn {
+        margin: 10px 0;
+        padding: 0;
+    
+        line-height: 0;
+    
+        background-color: var(--background-general-white);
+        color: var(--logo-title-black);
+    }
+    
+    .header-menu-btn__icon{
+        fill: currentColor;
+    }
+}
+

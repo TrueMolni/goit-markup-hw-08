@@ -1,0 +1,10 @@
+.subtitle {
+  @include font(14, 700, 16);
+  text-transform:uppercase;
+
+  color: var(--text-general-black);
+}
+
+.subtitle_dark-theme {
+  color: var(--background-general-white);
+}

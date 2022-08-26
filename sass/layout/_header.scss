@@ -1,0 +1,136 @@
+.main-header {
+  background-color: var(--background-general-white);
+  border-bottom: 1px solid var(--line-header-white);
+}
+
+.main-header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+  .menu {
+    display: none;
+  }
+
+  .header-contacts {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header-menu-btn {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main-nav {
+    display: flex;
+    align-items: center;
+  }
+  .menu {
+    display: flex;
+    margin-left: 87px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .menu__item {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+
+  .menu__link {
+    color: var(--text-general-black);
+    transition: color var(--animation-duration) var(--animation-cubic);
+
+    &:hover,
+    &:focus {
+      color: var(--button-active-blue);
+    }
+
+    &_current {
+      position: relative;
+      color: var(--button-active-blue);
+
+      &::after {
+        display: inline-block;
+        position: absolute;
+        content: "";
+
+        height: 4px;
+        width: 100%;
+
+        background-color: var(--button-active-blue);
+        border-radius: 2px;
+
+        top: 100%;
+        left: 0;
+        transform: translateY(29px);
+      }
+    }
+  }
+
+  .menu__link,
+  .header-contacts__link {
+    @include font(14, 500, 16);
+    letter-spacing: 0.02em;
+  }
+
+  .header-contacts {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+
+    &__item:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  .header-contacts__link {
+    display: flex;
+    align-items: center;
+    color: var(--text-subtitle-grey);
+    transition: color var(--animation-duration) var(--animation-cubic);
+
+    &:hover,
+    &:focus {
+      color: var(--button-active-blue);
+    }
+  }
+
+  .header-contacts__icon-envelope {
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;
+    fill: currentColor;
+  }
+
+  .header-contacts__icon-smartphone {
+    width: 10px;
+    height: 16px;
+    margin-right: 10px;
+    fill: currentColor;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .menu {
+    margin-left: 92px;
+  }
+
+  .header-contacts {
+    flex-direction: row;
+  
+
+  &__item:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 50px;
+  }
+  }
+}
