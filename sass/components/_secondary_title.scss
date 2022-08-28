@@ -1,6 +1,11 @@
 .secondary-title {
+  @include font(28, 700, 33);
+  @media screen and (min-width: 1200px) {
+    & {
+      @include font(36, 700, 42);
+    }
+  }
 
-  @include font(36, 700, 42);
   text-align: center;
 
   color: var(--text-general-black);

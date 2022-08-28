@@ -52,15 +52,15 @@
   }
 
   .mobile-menu__link {
-  display: block;
-  @include font (40, 500, 47);
-  letter-spacing: 0.02em;
+    display: block;
+    @include font(40, 500, 47);
+    letter-spacing: 0.02em;
 
-  color: var(--text-general-black) ;
-  
+    color: var(--text-general-black);
+
     &_current {
-        position: relative;
-        color: var(--button-active-blue);
+      position: relative;
+      color: var(--button-active-blue);
     }
   }
 
@@ -70,7 +70,7 @@
 
   .mobile-contacts__link_phone {
     display: block;
-    @include font (34, 500, 40);
+    @include font(34, 500, 40);
     letter-spacing: 0.02em;
 
     color: var(--button-active-blue);
@@ -78,7 +78,7 @@
 
   .mobile-contacts__link_email {
     display: block;
-    @include font (24, 500, 28);
+    @include font(24, 500, 28);
     letter-spacing: 0.02em;
 
     color: var(--text-subtitle-grey);
@@ -86,9 +86,10 @@
 
   .mobile-menu__media-list {
     display: flex;
+    flex-wrap: wrap;
   }
 
-  .mobile-menu__media-list-item{
+  .mobile-menu__media-list-item {
     padding: 0 10px;
 
     &:first-child {
@@ -102,7 +103,7 @@
 
   .mobile-menu__media-list-link {
     display: inline-block;
-    @include font (18, 500, 22);
+    @include font(18, 500, 22);
     letter-spacing: 0.02em;
 
     color: var(--button-active-blue);
